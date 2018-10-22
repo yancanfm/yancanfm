@@ -8,8 +8,8 @@ actors:
     name: りさきゃん
     url: https://twitter.com/_risacan_
 author: risacan
-description: TODO タイトル下の説明を書くところ
-description_long: TODO footerの説明を書くところ
+description: エンジニアめっちゃ楽しい
+description_long: りほやんとりさきゃんが今気になるテック系の話題を話すポッドキャストです。
 email: info@example.com
 exclude:
   - docker
