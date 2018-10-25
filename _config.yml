@@ -9,7 +9,7 @@ actors:
     url: https://twitter.com/_risacan_
 author: risacan
 description: エンジニアめっちゃ楽しい
-description_long: りほやんとりさきゃんが今気になるテック系の話題を話すポッドキャストです。
+description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
 email: info@example.com
 exclude:
   - docker
