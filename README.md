@@ -1,3 +1,3 @@
-# Yattecast
+# yancanfm
 
-https://r7kamura.github.io/yattecast/
+https://github.com/dots-girls/yancanfm
