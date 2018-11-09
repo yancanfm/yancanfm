@@ -7,10 +7,14 @@ actors:
     image_url: /images/actors/risacan.jpg
     name: りさきゃん
     url: https://twitter.com/_risacan_
+  tantan:
+    image_url: /images/actors/tantan.jpg
+    name: たんたん
+    url: https://twitter.com/ayanotango
 author: risacan
 description: エンジニアめっちゃ楽しい
 description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
-email: info@example.com
+? email
 exclude:
   - docker
   - docker-compose.yml
@@ -29,5 +33,5 @@ permalink: /episode/:title
 sass:
   sass_dir: css
 timezone: Asia/Tokyo
-title: やんきゃん.fm
-url: http://dots-girls.github.io/yancanfm
+title: yancan.fm
+url: https://www.yancan.tech
