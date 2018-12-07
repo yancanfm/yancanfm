@@ -11,6 +11,10 @@ actors:
     image_url: /images/actors/tantan.jpg
     name: たんたん
     url: https://twitter.com/ayanotango
+  kiripon:
+    image_url: /images/actors/kiripon.jpg
+    name: きりぽん
+    url: https://twitter.com/krk85y
 author: risacan
 description: エンジニアめっちゃ楽しい
 description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
