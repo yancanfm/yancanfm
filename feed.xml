@@ -9,6 +9,7 @@
     <description>{{ site.description | xml_escape }}</description>
     <media:keywords>{{ site.keywords }}</media:keywords>
     <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
+    <media:thumbnail url="{{ site.github.url }}/images/logo.png" />
     <language>{{ site.language }}</language>
     <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
     <itunes:author>{{ site.author }}</itunes:author>
