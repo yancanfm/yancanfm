@@ -1,0 +1,41 @@
+actors:
+  rihoyan:
+    image_url: /images/actors/rihoyan.jpg
+    name: りほやん
+    url: https://twitter.com/rllllho
+  risacan:
+    image_url: /images/actors/risacan.jpg
+    name: りさきゃん
+    url: https://twitter.com/_risacan_
+  tantan:
+    image_url: /images/actors/tantan.jpg
+    name: たんたん
+    url: https://twitter.com/ayanotango
+  kiripon:
+    image_url: /images/actors/kiripon.jpg
+    name: きりぽん
+    url: https://twitter.com/krk85y
+author: risacan
+description: エンジニアめっちゃ楽しい
+description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
+? email
+exclude:
+  - docker
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.md
+  - vendor
+google_analytics: UA-128113879-1
+hashtag: yancanfm
+itunes_podcast_url: https://itunes.apple.com/jp/podcast/yancan-fm/id1440314432?mt=2
+keywords: comma,separated,keywords
+language: ja
+markdown: kramdown
+permalink: /episode/:title
+sass:
+  sass_dir: css
+timezone: Asia/Tokyo
+title: yancan.fm
+url: https://www.yancan.tech

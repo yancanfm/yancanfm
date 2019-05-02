@@ -1,0 +1,67 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-sections">
+      <div class="row">
+        <section class="column-small-4 footer-sections-element">
+          <h1 class="footer-sections-element-heading">
+            {{ site.title }} とは
+          </h1>
+          <div class="footer-sections-element-description">
+            {{ site.title }} は、{{ site.description_long }}です。
+          </div>
+        </section>
+        <section class="column-small-4 footer-sections-element">
+          <h1 class="footer-sections-element-heading">
+            #{{ site.hashtag }}
+          </h1>
+          <div class="footer-sections-element-description">
+            {{ site.title }} への感想や質問などは、Twitterでハッシュタグ <a href="https://twitter.com/search?q=%23{{ site.hashtag }}" target="_blank">#{{ site.hashtag }}</a> をご利用ください。
+          </div>
+          <div class="footer-twitter">
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}">
+              Tweet
+            </a>
+          </div>
+        </section>
+        <section class="column-small-4 footer-sections-element">
+          <h1 class="footer-sections-element-heading">
+            購読
+          </h1>
+          <div class="footer-sections-element-description">
+            新しいエピソードの配信を購読できます。
+          </div>
+          <ul>
+            {% if site.itunes_podcast_url %}
+            <li>
+              <a href="{{ site.itunes_podcast_url }}" target="_blank"
+                >iTunesで購読</a
+              >
+            </li>
+            {% endif %}
+            <li>
+              <a href="{{ site.github.url }}/feed.xml" target="_blank"
+                >RSSで購読</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.23.4/mediaelement-and-player.min.js"></script>
+{% if site.google_analytics %}
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+{% endif %}
