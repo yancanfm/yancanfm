@@ -7,4 +7,5 @@ https://github.com/dots-girls/yancanfm
 ```
 $ bundle
 $ bundle exec jekyll s
+$ open http://localhost:4000
 ```
