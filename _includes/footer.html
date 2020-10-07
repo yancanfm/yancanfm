@@ -18,7 +18,7 @@
             {{ site.title }} への感想や質問などは、Twitterでハッシュタグ <a href="https://twitter.com/search?q=%23{{ site.hashtag }}" target="_blank">#{{ site.hashtag }}</a> をご利用ください。
           </div>
           <div class="footer-twitter">
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}">
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?&text=%23yancanfm">
               Tweet
             </a>
           </div>
@@ -31,15 +31,28 @@
             新しいエピソードの配信を購読できます。
           </div>
           <ul>
-            {% if site.itunes_podcast_url %}
             <li>
-              <a href="{{ site.itunes_podcast_url }}" target="_blank"
-                >iTunesで購読</a
+              <a href="https://podcasts.apple.com/us/podcast/yancan-fm/id1440314432?uo=4" target="_blank"
+                >Apple Podcastsで購読</a
               >
             </li>
-            {% endif %}
             <li>
-              <a href="{{ site.github.url }}/feed.xml" target="_blank"
+              <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9jYTI0MzE4L3BvZGNhc3QvcnNz" target="_blank"
+                >Google Podcastsで購読</a
+              >
+            </li>
+            <li>
+              <a href="https://open.spotify.com/show/6Vcs6a4FITzWZBnvdLOByQ" target="_blank"
+                >Spotifyで購読</a
+              >
+            </li>
+                        <li>
+              <a href="https://anchor.fm/yancanfm" target="_blank"
+                >Anchorで購読</a
+              >
+            </li>
+            <li>
+              <a href="https://anchor.fm/s/ca24318/podcast/rss" target="_blank"
                 >RSSで購読</a
               >
             </li>
