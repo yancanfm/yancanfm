@@ -1,4 +1,6 @@
-on: push
+on:
+  schedule:
+    - cron: "0 2 * * 5"
 
 jobs:
   get_rss_job:
