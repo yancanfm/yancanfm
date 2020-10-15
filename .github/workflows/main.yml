@@ -1,0 +1,52 @@
+on:
+  schedule:
+    - cron: "0 2 * * 5"
+
+jobs:
+  get_rss_job:
+    runs-on: ubuntu-latest
+    name: RSSゲットしてくるよ〜
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get RSS data
+        uses: ./.github/actions
+        id: rssData
+        with:
+          url: 'https://anchor.fm/s/ca24318/podcast/rss'
+    outputs:
+      title: ${{ steps.rssData.outputs.title }}
+      link: ${{ steps.rssData.outputs.link }}
+      content: ${{ steps.rssData.outputs.content }}
+      date: ${{ steps.rssData.outputs.date }}
+  create_new_file_job:
+    runs-on: ubuntu-latest
+    name: ファイルを作るよ〜
+    needs: get_rss_job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create a new file
+        uses: ./.github/add-file
+        id: addFile
+        with:
+          title: ${{ needs.get_rss_job.outputs.title }}
+          link: ${{ needs.get_rss_job.outputs.link }}
+          content: ${{ needs.get_rss_job.outputs.content }}
+          date: ${{ needs.get_rss_job.outputs.date }}
+  commit_new_file_job:
+    runs-on: ubuntu-latest
+    name: コミットするよ〜
+    needs: [get_rss_job, create_new_file_job]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Get new file
+        uses: ./.github/commit-file
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          token: ${{ secrets.token }}
+          commit_message: ":tada: Add new episode"

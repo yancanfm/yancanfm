@@ -1,0 +1,21 @@
+name: 'エピソード用ファイル作成'
+description: 'ファイルを追加するよ'
+inputs:
+  title:
+    description: 'エピソードのタイトル'
+    required: true
+  link:
+    description: "エピソードのURL"
+    required: true
+  content:
+    description: "エピソードの説明"
+    required: true
+  date:
+    description: "エピソードのリリース時間"
+    required: true
+outputs:
+    episodefile:
+      description: "新しいエピソードのファイル"
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

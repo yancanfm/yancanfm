@@ -1,0 +1,5 @@
+name: 'ファイルをコミット'
+description: 'ファイルをコミットするよ'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
