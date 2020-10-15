@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "20 8 * * 4"
+    - cron: "30 8 * * 4"
 
 jobs:
   get_rss_job:
