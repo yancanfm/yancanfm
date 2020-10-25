@@ -13,6 +13,9 @@ inputs:
   date:
     description: "エピソードのリリース時間"
     required: true
+  enclosureUrl:
+    description: "enclosureUrl"
+    required: true
 outputs:
     episodefile:
       description: "新しいエピソードのファイル"

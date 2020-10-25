@@ -26,6 +26,7 @@ try {
     core.setOutput("link", embedUrl);
     core.setOutput("content", latest.content);
     core.setOutput("date", latest.pubDate);
+    core.setOutput("enclosureUrl", latest.enclosure.url);
   })();
 } catch (error) {
   core.setFailed(error.message);
