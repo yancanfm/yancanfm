@@ -23,6 +23,7 @@ audio_file_path: ${link}
 date: ${date}
 layout: anchor
 title: ${title}
+enclosure_url: ${enclosureUrl}
 ---
 ${content}
   `;

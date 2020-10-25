@@ -19,6 +19,7 @@ jobs:
       link: ${{ steps.rssData.outputs.link }}
       content: ${{ steps.rssData.outputs.content }}
       date: ${{ steps.rssData.outputs.date }}
+      enclosureUrl: ${{ steps.rssData.outputs.enclosureUrl }}
   create_new_file_job:
     runs-on: ubuntu-latest
     name: ファイルを作るよ〜
@@ -34,6 +35,7 @@ jobs:
           link: ${{ needs.get_rss_job.outputs.link }}
           content: ${{ needs.get_rss_job.outputs.content }}
           date: ${{ needs.get_rss_job.outputs.date }}
+          enclosureUrl: ${{ needs.get_rss_job.outputs.enclosureUrl }}
   commit_new_file_job:
     runs-on: ubuntu-latest
     name: コミットするよ〜
