@@ -14,6 +14,7 @@ try {
   const link = core.getInput("link");
   const content = core.getInput("content");
   const date = core.getInput("date");
+  const enclosureUrl = core.getInput("enclosureUrl");
 
   text = `---
 actor_ids:
