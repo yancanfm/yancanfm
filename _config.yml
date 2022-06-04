@@ -19,6 +19,10 @@ actors:
     image_url: /images/actors/kasumi.jpg
     name: かすみ
     url: https://twitter.com/kasumi8pon
+  mami_inuzuka:
+    image_url: /images/actors/mami_inuzuka.jpg
+    name: いぬづかまみ
+    url: https://twitter.com/mami_inuzuka
 author: yancanfm
 description: エンジニアめっちゃ楽しい
 description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
