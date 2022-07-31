@@ -23,6 +23,10 @@ actors:
     image_url: /images/actors/mami_inuzuka.jpg
     name: いぬづかまみ
     url: https://twitter.com/mami_inuzuka
+  maf:
+    image_url: /images/actors/maf.jpg
+    name: maf
+    url: https://twitter.com/_maf_u_
 author: yancanfm
 description: エンジニアめっちゃ楽しい
 description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
