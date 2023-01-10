@@ -28,8 +28,12 @@ actors:
     name: maf
     url: https://twitter.com/_maf_u_
 author: yancanfm
-description: 女性エンジニア2人の最近の気になるテックやハマってるものなどを話します。Web3やAIなど日米最新テックや女性エンジニアのライフスタイルをお届けしています。水曜更新(大体)
-description_long: ニューヨークの大学院に通うりほやんと、東京フルリモート多めのりさきゃん。エンジニア2人が今気になるテックや日米それぞれの日常について話してます！
+description: アメリカと日本に住む女性エンジニア2人が日米の気になるテックやそれぞれのライフスタイルをお届けしています！
+icons:
+  spotify: /images/spotify.svg
+  apple: /images/apple.svg
+  rss: /images/rss.svg
+description_long: ニューヨークの美大大学院に通うりほやんと、東京フルリモート多めのりさきゃん。エンジニア2人が今気になるテックや日米それぞれの日常について話してます！
 email:
 exclude:
   - docker
