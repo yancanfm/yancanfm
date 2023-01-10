@@ -23,6 +23,16 @@
       }
     }
   }
+  .icon_image {
+    width: 30px;
+  }
+  .icons {
+    margin-top: 12px;
+    display: flex;
+  }
+  .icons_title {
+    color: #fff;
+  }
 
   &-overlay {
     background-color: rgba(0, 0, 0, 0.3);

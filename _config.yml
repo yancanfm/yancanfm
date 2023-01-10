@@ -28,9 +28,13 @@ actors:
     name: maf
     url: https://twitter.com/_maf_u_
 author: yancanfm
-description: エンジニアめっちゃ楽しい
-description_long: りほやんとりさきゃんが今気になるテック系の話題を話したり話さなかったりするポッドキャスト
-? email
+description: アメリカと日本に住む女性エンジニア2人が日米の気になるテックやそれぞれのライフスタイルをお届けしています！
+icons:
+  spotify: /images/spotify.svg
+  apple: /images/apple.svg
+  rss: /images/rss.svg
+description_long: ニューヨークの美大大学院に通うりほやんと、東京フルリモート多めのりさきゃん。エンジニア2人が今気になるテックや日米それぞれの日常について話してます！
+email:
 exclude:
   - docker
   - docker-compose.yml
