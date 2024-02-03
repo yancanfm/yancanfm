@@ -8,7 +8,7 @@ jobs:
     name: RSSゲットしてくるよ〜
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Get RSS data
         uses: ./.github/actions
         id: rssData
@@ -42,7 +42,7 @@ jobs:
     needs: [get_rss_job, create_new_file_job]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.token }}
