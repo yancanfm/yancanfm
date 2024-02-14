@@ -13,7 +13,7 @@ jobs:
         uses: ./.github/actions
         id: rssData
         with:
-          url: 'https://anchor.fm/s/ca24318/podcast/rss'
+          url: 'https://rss.art19.com/yancanfm'
     outputs:
       title: ${{ steps.rssData.outputs.title }}
       link: ${{ steps.rssData.outputs.link }}
