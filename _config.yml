@@ -27,6 +27,10 @@ actors:
     image_url: /images/actors/maf.jpg
     name: maf
     url: https://twitter.com/_maf_u_
+  mktakuya:
+    image_url: /images/actors/mktakuya.jpg
+    name: mktakuya
+    url: https://twitter.com/mktakuya
 author: yancanfm
 description: アメリカと日本に住む女性エンジニア2人が日米の気になるテックやそれぞれのライフスタイルをお届けしています！
 icons:
