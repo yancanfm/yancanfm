@@ -31,6 +31,10 @@ actors:
     image_url: /images/actors/mktakuya.jpg
     name: mktakuya
     url: https://twitter.com/mktakuya
+  damuha:
+    image_url: /images/actors/damuha.jpg
+    name: damuha
+    url: https://twitter.com/damuha_
 author: yancanfm
 description: アメリカと日本に住む女性エンジニア2人が日米の気になるテックやそれぞれのライフスタイルをお届けしています！
 icons:
