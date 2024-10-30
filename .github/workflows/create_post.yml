@@ -13,13 +13,13 @@ jobs:
           node-version: 16
       - run: npm install  
       - run: |
-        const Parser = require('rss-parser');
-        const parser = new Parser();
-        const feed = await parser.parseURL('https://example.com/feed.xml');
+          const Parser = require('rss-parser');
+          const parser = new Parser();
+          const feed = await parser.parseURL('https://example.com/feed.xml');
 
-        // Process the feed data here
-        feed.items.forEach(item => {
-          console.log(item.title);
-          console.log(item.link);
-          // Add your desired actions
-        });
+          // Process the feed data here
+          feed.items.forEach(item => {
+            console.log(item.title);
+            console.log(item.link);
+            // Add your desired actions
+          });
