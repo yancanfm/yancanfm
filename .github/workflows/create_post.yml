@@ -2,7 +2,7 @@ name: create post
 on: "push"
 jobs:
  rss-parser:
-  - name: Parse RSS feed
+  - name: "Parse RSS feed"
     run: |
       const Parser = require('rss-parser');
       const parser = new Parser();
