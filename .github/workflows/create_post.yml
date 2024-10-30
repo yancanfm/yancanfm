@@ -1,8 +1,16 @@
 name: create post
 on: "push"
 jobs:
- rss-parser:
-  - name: "Parse RSS feed"
+  parse-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm install  
+  rss-parser:
     run: |
       const Parser = require('rss-parser');
       const parser = new Parser();
