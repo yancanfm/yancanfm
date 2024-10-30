@@ -1,22 +1,25 @@
-name: create post
-on: "push"
+name: RSS Feed Parser
+
+on:
+  "push"
+
 jobs:
-  parse-rss:
+  rss-parser:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install dependencies
-        run: npm install  
-  rss-parser:
-    run: |
-      const Parser = require('rss-parser');
-      const parser = new Parser();
-      const feed = await parser.parseURL('https://rss.art19.com/yancanfm');
+      - run: npm install  
+      - run: |
+        const Parser = require('rss-parser');
+        const parser = new Parser();
+        const feed = await parser.parseURL('https://example.com/feed.xml');
 
-      feed.items.forEach(item => {
-        console.log(item.title);
-        console.log(item.link);
-      });
+        // Process the feed data here
+        feed.items.forEach(item => {
+          console.log(item.title);
+          console.log(item.link);
+          // Add your desired actions
+        });
