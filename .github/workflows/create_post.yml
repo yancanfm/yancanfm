@@ -1,11 +1,14 @@
 name: create post
 on: "push"
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: node gerRss.js
+ rss-parser:
+      - name: Parse RSS feed
+        run: |
+          const Parser = require('rss-parser');
+          const parser = new Parser();
+          const feed = await parser.parseURL('https://rss.art19.com/yancanfm');
+
+          feed.items.forEach(item => {
+            console.log(item.title);
+            console.log(item.link);
+          });
