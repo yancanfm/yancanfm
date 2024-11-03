@@ -1,0 +1,25 @@
+{
+  "name": "yancanfm",
+  "version": "1.0.0",
+  "description": "https://github.com/dots-girls/yancanfm",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yancanfm/yancanfm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yancanfm/yancanfm/issues"
+  },
+  "homepage": "https://github.com/yancanfm/yancanfm#readme",
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
