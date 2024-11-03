@@ -26,7 +26,7 @@ async function parsePost() {
 
     const fs = require('fs');
 
-    fs.writeFile(`_posts/${formattedDate}.md`, `---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${url}\naudio_file_path: ${audioFilePath}\n---\n${content}`, (err) => {
+    fs.writeFile(`_posts/${formattedDate}.md`, `---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${enclosure_url}\naudio_file_path: ${audioFilePath}\n---\n${content}`, (err) => {
         if (err) throw err;
         console.log('File has been created and saved!');
     });
