@@ -15,18 +15,18 @@ async function parsePost() {
     const dateString = latestEpisode.pubDate
     const date = new Date(dateString);
     const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-    const audioFilePath = "https://art19.com/shows/${urlId}/episodes/${urlId}/embed"
+    const audioFilePath = `https://art19.com/shows/${urlId}/episodes/${urlId}/embed`
 
-    console.log("title: ${title}");
-    console.log("date: ${formattedDate}");
-    console.log("enclosure_url: ${url}");
-    console.log(urlId ? urlId[0] : "No match found");
-    console.log("audio_file_path: ${audioFilePath}");
-    console.log("content: ${content}");
+    console.log(`title: ${title}`);
+    console.log(`date: ${formattedDate}`);
+    console.log(`enclosure_url: ${url}`);
+    console.log(urlId ? urlId[0] : `No match found`);
+    console.log(`audio_file_path: ${audioFilePath}`);
+    console.log(`content: ${content}`);
 
     const fs = require('fs');
 
-    fs.writeFile("_posts/${formattedDate}.md", "---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${url}\naudio_file_path: ${audioFilePath}\n---\n${content}", (err) => {
+    fs.writeFile(`_posts/${formattedDate}.md`, `---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${url}\naudio_file_path: ${audioFilePath}\n---\n${content}`, (err) => {
         if (err) throw err;
         console.log('File has been created and saved!');
     });
