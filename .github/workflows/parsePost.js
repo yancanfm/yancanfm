@@ -16,11 +16,11 @@ async function parsePost() {
     const dateString = latestEpisode.pubDate
     const date = new Date(dateString);
     const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-    const audioFilePath = `https://art19.com/shows/${urlId}/episodes/${urlId}/embed`
+    const audioFilePath = `https://art19.com/shows/df57f7bd-37e4-465d-90a7-5c18294f290b/episodes/${urlId}/embed`
 
     const fs = require('fs');
 
-    fs.writeFile(`_posts/${formattedDate}-${titleNumber}.md`, `---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${enclosure_url}\naudio_file_path: ${audioFilePath}\n---\n${content}`, (err) => {
+    fs.writeFile(`_posts/${formattedDate}-${titleNumber}.md`, `---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${enclosure_url}\naudio_file_path: ${audioFilePath}\n---\n${content.replace(/        /, "")}`, (err) => {
         if (err) throw err;
         console.log('File has been created and saved!');
     });
