@@ -1,0 +1,26 @@
+name: RSS Feed Parser
+
+on:
+  "push"
+
+jobs:
+  rss-parser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: node .github/workflows/parsePost.js
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "🆕 New episode!" || echo "No changes to commit"
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push
+
