@@ -6,17 +6,27 @@ async function parsePost() {
     console.log("🐶")
     const latestEpisode = feed.items[0];
     console.log(JSON.stringify(latestEpisode.enclosure, null, 2));
-    console.log(latestEpisode);
-    console.log(latestEpisode.title);
-    console.log(latestEpisode.enclosure.url);
 
+    const title = latestEpisode.title
+    const enclosure_url = latestEpisode.enclosure.url
     const uuidRegex = /[0-9a-f]{8}-[0-9a-f]{4}-[4][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}/i;
-    const url = latestEpisode.enclosure.url.match(uuidRegex);
-    console.log(url ? url[0] : "No match found");
+    const urlId = enclosure_url.match(uuidRegex);
+    const content = latestEpisode.content
+    const dateString = latestEpisode.pubDate
+    const date = new Date(dateString);
+    const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    const audioFilePath = "https://art19.com/shows/${urlId}/episodes/${urlId}/embed"
+
+    console.log("title: ${title}");
+    console.log("date: ${formattedDate}");
+    console.log("enclosure_url: ${url}");
+    console.log(urlId ? urlId[0] : "No match found");
+    console.log("audio_file_path: ${audioFilePath}");
+    console.log("content: ${content}");
 
     const fs = require('fs');
 
-    fs.writeFile('hello.txt', 'Hello, world!', (err) => {
+    fs.writeFile("_posts/${formattedDate}.md", "---\nactor_ids:\n  - rihoyan\n  - risacan\ntitle: '${title}'\ndate: ${formattedDate}\nlayout: art19\nenclosure_url: ${url}\naudio_file_path: ${audioFilePath}\n---\n${content}", (err) => {
         if (err) throw err;
         console.log('File has been created and saved!');
     });
