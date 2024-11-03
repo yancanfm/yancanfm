@@ -19,7 +19,7 @@ async function parsePost() {
 
     console.log(`title: ${title}`);
     console.log(`date: ${formattedDate}`);
-    console.log(`enclosure_url: ${url}`);
+    console.log(`enclosure_url: ${enclosure_url}`);
     console.log(urlId ? urlId[0] : `No match found`);
     console.log(`audio_file_path: ${audioFilePath}`);
     console.log(`content: ${content}`);
