@@ -5,8 +5,9 @@ async function parsePost() {
 
     console.log("🐶")
     const latestEpisode = feed.items[0];
-    console.log(latest.title);
-    console.log(latest.enclosure_url);
+    console.log(latestEpisode);
+    console.log(latestEpisode.title);
+    console.log(latestEpisode.enclosure_url);
 }
 
 parsePost();
