@@ -4,9 +4,8 @@ async function parsePost() {
     const parser = new Parser();
     const feed = await parser.parseURL('https://rss.art19.com/yancanfm');
 
-    feed.items.forEach(item => {
+    feed.items.first(item => {
         console.log(item.title);
-        console.log(item.link);
     });
 }
 
